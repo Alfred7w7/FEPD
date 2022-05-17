@@ -1,24 +1,37 @@
-body{
+body {
     background: url(../ProyectoAlfredDelgadoCordero/Imagenes/pattern.png);
     background-attachment: fixed;
 }
-.clearfix{
+
+.clearfix {
     float: none;
     clear: both;
 }
-h1,h2 {
+
+#container {
+    width: 70%;
+    margin: 0px auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+h1,
+h2 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
     text-align: center;
     text-decoration: underline;
+    font-size: 1em;
 }
-p{
-    font-size: 25px;
+
+p {
+    font-size: 1em;
 }
-.boton{
-    display: block;
-    float: left;
-    margin: 7px;
+
+.boton {
+    display: flex;
+    margin: 15px;
+    margin-left: 50px;
     padding: 20px;
     text-decoration: none;
     background-color: darkred;
@@ -29,22 +42,27 @@ p{
     border: 5px solid greenyellow;
     transition: all 2s;
 }
-.boton:hover{
+
+.boton:hover {
     border-radius: 15px;
     background: hotpink;
     border: 5px solid aqua;
 }
-li{
-    font-size: 25px;
+
+li {
+    font-size: 1em;
 }
-h3,h4{
+
+h3,
+h4 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
     text-decoration: underline;
-    font-size: 30px;
+    font-size: 1em;
 
 }
-#banner{
+
+#banner {
     width: 95.6%;
     height: 100px;
     border: 10px solid white;
@@ -53,31 +71,40 @@ h3,h4{
     background-position: -300px -300px;
     margin: 10px auto;
 }
-#banner h1,h2{
+
+#banner h1,
+h2 {
     display: block;
     color: white;
     text-shadow: 2px 2px 1px black;
     line-height: 20px;
 }
-#contenido{
+
+#contenido {
     width: 69%;
     color: purple;
     float: left;
 }
-#lateral{
+
+#lateral {
+    display: flex;
     float: left;
     width: 30%;
     border: 3px solid red;
+    box-sizing: border-box;
 
 }
-#lateral > nav > h3{
+
+#lateral>nav>h3 {
     text-align: center;
 }
-#lateral > nav{
- color: black;
+
+#lateral>nav {
+    color: black;
 }
-#footer > h3{
-    display: block;
+
+#footer>h3 {
+    display: flex;
     width: 270px;
     height: 45px;
     line-height: 49px;
@@ -86,14 +113,11 @@ h3,h4{
     font-size: 30px;
     text-decoration: none;
 }
-#footer > a{
+
+#footer>a {
     margin: 7px;
 }
-.logos:hover{
+
+.logos:hover {
     border-radius: 50%;
 }
-#red:hover{
-    width: 50%;
-    background: red;
-}
-
