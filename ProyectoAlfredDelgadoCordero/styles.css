@@ -89,4 +89,11 @@ h3,h4{
 #footer > a{
     margin: 7px;
 }
+.logos:hover{
+    border-radius: 50%;
+}
+#red:hover{
+    width: 50%;
+    background: red;
+}
 
