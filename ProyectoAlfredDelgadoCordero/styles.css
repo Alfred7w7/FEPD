@@ -1,43 +1,94 @@
-body {
-    background: url(../ProyectoAlfredDelgadoCordero/Imagenes/pattern.png);
-    background-attachment: fixed;
-}
-
-.clearfix {
-    float: none;
-    clear: both;
+* {
+    text-shadow: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #container {
-    width: 70%;
+    width: 90%;
+    height: auto;
     margin: 0px auto;
+    border: 1px solid rgba(225, 225, 226, 0.8);
+    box-shadow: 0px 0px 10px #ccc;
     margin-top: 40px;
     margin-bottom: 40px;
+    min-height: 600px;
 }
 
-h1,
-h2 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+#header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 120px;
+    border-bottom: 1px solid rgba(225, 225, 226, 0.8);
+}
+
+.logo {
+    flex-grow: 1;
+    flex-basis: 25%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
-    text-align: center;
-    text-decoration: underline;
-    font-size: 1em;
+    font-size: 34px;
+    color: black;
+    padding: 10px;
+    margin-left: 5px;
+    text-shadow: 1px 1px 0px #ccc;
 }
 
-p {
-    font-size: 1em;
+.logo h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 34px;
+    color: black;
+}
+
+#menu {
+    flex-grow: 1;
+    flex-basis: 30%;
+    height: 100%;
+    padding-right: 10px;
+}
+
+#menu>ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    list-style: none;
+}
+
+#menu a {
+    color: #444;
+    padding: 7px;
+    transition: all 300ms;
+}
+
+#menu a:hover {
+    background: #ccc;
+    color: white;
+
+}
+
+#content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .boton {
     display: flex;
     margin: 15px;
-    margin-left: 50px;
+    margin-left: 20px;
     padding: 20px;
     text-decoration: none;
     background-color: darkred;
     color: white;
-    width: 135px;
-    text-align: center;
+    width: 90px;
     font-weight: bold;
     border: 5px solid greenyellow;
     transition: all 2s;
@@ -49,75 +100,85 @@ p {
     border: 5px solid aqua;
 }
 
-li {
-    font-size: 1em;
-}
+#texto {
+    color: black;
+    margin-left: 20px;
 
-h3,
-h4 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: italic;
-    text-decoration: underline;
-    font-size: 1em;
-
-}
-
-#banner {
-    width: 95.6%;
-    height: 100px;
-    border: 10px solid white;
-    box-shadow: 0px 0px 2px gray;
-    background: url(../ProyectoAlfredDelgadoCordero/Imagenes/bakbaner.png);
-    background-position: -300px -300px;
-    margin: 10px auto;
-}
-
-#banner h1,
-h2 {
-    display: block;
-    color: white;
-    text-shadow: 2px 2px 1px black;
-    line-height: 20px;
-}
-
-#contenido {
-    width: 69%;
-    color: purple;
-    float: left;
 }
 
 #lateral {
+    flex-basis: 15%;
+    padding: 10px;
     display: flex;
-    float: left;
-    width: 30%;
-    border: 3px solid red;
-    box-sizing: border-box;
-
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-#lateral>nav>h3 {
+#lateral h1 {
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    color: red;
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(225, 225, 226, 0.8);
     text-align: center;
 }
 
-#lateral>nav {
-    color: black;
+#lateral ul {
+    list-style: none;
 }
 
-#footer>h3 {
-    display: flex;
-    width: 270px;
-    height: 45px;
-    line-height: 49px;
-    background: url('../ProyectoAlfredDelgadoCordero/Imagenes/pxgray.png') white;
-    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
-    font-size: 30px;
-    text-decoration: none;
+#lateral ul li {
+    padding-bottom: 20px;
 }
 
-#footer>a {
-    margin: 7px;
+footer {
+    height: 120px;
+    border-top: 1px solid rgba(225, 225, 226, 0.8);
 }
 
-.logos:hover {
-    border-radius: 50%;
+#footer .logo {
+    opacity: 0.7;
+    flex-basis: auto;
+}
+
+@media(max-width: 612px) {
+    #lateral {
+        order: 2;
+    }
+}
+@media(max-width: 465px) {
+    #texto ul{
+        background-image: url(../ProyectoAlfredDelgadoCordero/Imagenes/anime2.jpg);
+        
+    }
+}
+@media(max-width: 457px) {
+    #header{
+        display: none;
+    }
+}
+
+@media(min-width: 992px) {
+    #menu {
+        display: none;
+    }
+}
+
+@media(max-height: 575px) {
+    #footer {
+        display: none;
+    }
+}
+@media(max-width: 624px) {
+    #content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }
